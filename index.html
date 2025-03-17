@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaveCart - Universal Shopping Cart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 16px;
+      width: 320px;
+      min-height: 300px;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 18px;
+      color: #4F46E5;
+    }
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .product-title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .price {
+      font-weight: 700;
+      font-size: 18px;
+      color: #4F46E5;
+    }
+    .original-price {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+    .store-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background-color: #f3f4f6;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .button {
+      background-color: #4F46E5;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      width: 100%;
+    }
+    .button:hover {
+      background-color: #4338CA;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #888;
+      margin-top: 8px;
+    }
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px;
+    }
+    #dashboard-link {
+      color: #4F46E5;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 8px;
+      display: block;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">SaveCart</div>
+      <div>Universal Shopping Cart</div>
+    </div>
+    
+    <div id="product-container">
+      <div class="loading">Loading product info...</div>
+    </div>
+    
+    <a id="dashboard-link" href="http://localhost:5000" target="_blank">📊 View All Products</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
